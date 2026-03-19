@@ -71,7 +71,7 @@ export function BackHomeEnd() {
     navigate("/");
   }
   function tryAgain() {
-    window.location.reload()
+    navigate(0)
   }
 
   return (
