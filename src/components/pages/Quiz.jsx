@@ -64,6 +64,11 @@ function Quiz() {
       );
     }
   }
+  function resetQuiz() {
+    setCurrent(0);
+    setScore(0);
+    setShowScore(false);
+  }
 
   return (
     <div>
@@ -76,7 +81,7 @@ function Quiz() {
               Quiz finished! Your score: {score} / {questions.length}
             </p>
             {scoreExplainer(score)}
-            <BackHomeEnd />
+            <BackHomeEnd tryAgain={resetQuiz} />
           </div>
         ) : (
           <>

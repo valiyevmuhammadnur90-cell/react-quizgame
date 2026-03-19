@@ -3,6 +3,7 @@ import {
   DoubleRightOutlined,
   RightOutlined,
 } from "@ant-design/icons";
+import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 export default function Button() {
@@ -65,13 +66,12 @@ export function BackHomeAuth() {
   );
 }
 
-export function BackHomeEnd() {
+export function BackHomeEnd({ tryAgain }) {
   const navigate = useNavigate();
+  const [questionIndex, setQuestionIndex] = useState(0);
+  const [score, setScore] = useState(0);
   function backHome() {
     navigate("/");
-  }
-  function tryAgain() {
-    navigate(0)
   }
 
   return (
