@@ -44,7 +44,6 @@ function Quiz() {
       setShowScore(true);
     }
   };
-
   function scoreExplainer(score) {
     if (score <= 2 && score != 3) {
       return (

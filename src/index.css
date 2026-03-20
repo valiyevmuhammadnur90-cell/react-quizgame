@@ -374,7 +374,7 @@ body {
 }
 .cards {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 20px;
 }
 .card {
@@ -638,4 +638,44 @@ body {
 .backHomeEnd:nth-child(2):hover {
   transform: translateY(-3px);
   box-shadow: 0 10px 25px rgba(255, 41, 41, 0.4);
+}
+.search-wrapper {
+  display: flex;
+  align-items: center;
+  width: 400px;
+  margin: 20px auto;
+  background: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+}
+.search-wrapper input {
+  flex: 1;
+  padding: 12px 15px;
+  border: none;
+  outline: none;
+  font-size: 15px;
+  color: #333;
+  background: transparent;
+}
+.search-wrapper input::placeholder {
+  color: #aaa;
+}
+.search-wrapper button {
+  border: none;
+  background: transparent;
+  padding: 12px 15px;
+  cursor: pointer;
+  font-size: 18px;
+  color: #66c2a5;
+  transition: 0.3s;
+}
+.search-wrapper button:hover {
+  color: #66eec3;
+  background-color: #009688;
+}
+.search-wrapper:focus-within {
+  border-color: #66c2a5;
+  box-shadow: 0 4px 15px rgba(102, 194, 165, 0.2);
 }
