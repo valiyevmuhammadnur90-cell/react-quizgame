@@ -2,6 +2,7 @@ import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import NotFound from "./NotFound";
 import { BackHome, BackHomeEnd } from "../../ui/Button";
+import { CheckOutlined, CloseOutlined } from "@ant-design/icons";
 
 const API_URL = "https://bc489f41320cad41.mokky.dev/questions";
 
@@ -13,6 +14,7 @@ function Quiz() {
   const [loading, setLoading] = useState(true);
   const [score, setScore] = useState(0);
   const [showScore, setShowScore] = useState(false);
+  const [answersList, setAnswersList] = useState([]);
 
   useEffect(() => {
     setLoading(true);
@@ -27,6 +29,12 @@ function Quiz() {
       })
       .catch(() => setLoading(false));
   }, [category]);
+  useEffect(() => {
+    if (showScore) {
+      console.log("FINAL ANSWERS:", answersList);
+      console.log("SCORE:", score);
+    }
+  }, [showScore, answersList, score]);
 
   if (loading) return <p className="loading-display">Loading...</p>;
   if (!questions.length) return <NotFound />;
@@ -35,7 +43,10 @@ function Quiz() {
 
   const handleAnswer = (index) => {
     if (index === question.correct) {
-      setScore(score + 1);
+      setScore((prev) => prev + 1);
+      setAnswersList((prev) => [...prev, "✅ - correct"]);
+    } else {
+      setAnswersList((prev) => [...prev, "❌ - incorrect"]);
     }
 
     if (current + 1 < questions.length) {
@@ -67,6 +78,7 @@ function Quiz() {
     setCurrent(0);
     setScore(0);
     setShowScore(false);
+    setAnswersList([]);
   }
 
   return (
@@ -75,11 +87,21 @@ function Quiz() {
         <h2>{category.toUpperCase()} Quiz</h2>
 
         {showScore ? (
-          <div>
+          <div className="showScoreDiv">
             <p>
               Quiz finished! Your score: {score} / {questions.length}
             </p>
             {scoreExplainer(score)}
+
+            <h2>Answers</h2>
+            <ol className="ol">
+              {answersList.map((a) => (
+                <li>
+                  {question.current} {a}
+                </li>
+              ))}
+            </ol>
+
             <BackHomeEnd tryAgain={resetQuiz} />
           </div>
         ) : (

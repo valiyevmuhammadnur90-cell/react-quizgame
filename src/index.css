@@ -677,5 +677,12 @@ body {
 }
 .search-wrapper:focus-within {
   border-color: #66c2a5;
-  box-shadow: 0 4px 15px rgba(102, 194, 165, 0.2);
+  box-shadow: 0 4px 15px #66c2a533;
+}
+.showScoreDiv h2 {
+  margin-top: 20px;
+  color: #ffd700;
+}
+.ol {
+  margin-left: 230px;
 }
