@@ -728,6 +728,9 @@ body {
 }
 @media (max-width: 350px) {
   .search-wrapper {
-    width: 300px;
+    width: 285px;
+  }
+  .search-wrapper button {
+    padding: 10px 12px;
   }
 }
