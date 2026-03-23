@@ -678,6 +678,9 @@ body {
     top: 20px;
     left: 10px;
   }
+  .search-wrapper {
+    width: 390px;
+  }
 }
 @media (max-width: 380px) {
   .login-card {
@@ -698,6 +701,9 @@ body {
   }
   .search-wrapper {
     width: 340px;
+  }
+  .search-wrapper input {
+    padding: 8px 10px;
   }
   .ol {
     margin-left: 120px;
