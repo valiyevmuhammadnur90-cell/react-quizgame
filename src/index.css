@@ -450,54 +450,52 @@ body {
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
   margin: 20px;
 }
-
-/* --------------------------
-  --------------------------
-     Responsive Design
-  --------------------------
--------------------------- */
-
-@media (max-width: 430px) {
-  .nav {
-    max-width: 425px;
-    width: 100%;
-    margin: 0 auto;
-    padding: 20px 10px;
-  }
-  .nav h2 {
-    font-size: 18px;
-  }
-  .nav-sign button {
-    padding: 8px 16px;
-    font-size: 12px;
-  }
-  .main h2 {
-    font-size: 18px;
-  }
-  .login-page {
-    height: calc(100vh - 71px);
-  }
-  .signup-page {
-    height: calc(100vh - 71px);
-  }
+.search-wrapper {
+  display: flex;
+  align-items: center;
+  width: 400px;
+  margin: 20px auto;
+  background: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
 }
-@media (max-width: 380px) {
-  .login-card {
-    width: 280px;
-  }
-  .login-card button {
-    padding: 10px;
-    font-size: 14px;
-    border-radius: 12px;
-  }
-  .signup-card {
-    width: 290px;
-  }
-  .signup-card button {
-    padding: 10px;
-    font-size: 14px;
-    border-radius: 12px;
-  }
+.search-wrapper input {
+  flex: 1;
+  padding: 12px 15px;
+  border: none;
+  outline: none;
+  font-size: 15px;
+  color: #333;
+  background: transparent;
+}
+.search-wrapper input::placeholder {
+  color: #aaa;
+}
+.search-wrapper button {
+  border: none;
+  background: transparent;
+  padding: 12px 15px;
+  cursor: pointer;
+  font-size: 18px;
+  color: #66c2a5;
+  transition: 0.3s;
+}
+.search-wrapper button:hover {
+  color: #66eec3;
+  background-color: #009688;
+}
+.search-wrapper:focus-within {
+  border-color: #66c2a5;
+  box-shadow: 0 4px 15px #66c2a533;
+}
+.showScoreDiv h2 {
+  margin-top: 20px;
+  color: #ffd700;
+}
+.ol {
+  margin-left: 230px;
 }
 .scoreExplainerText {
   margin-top: 20px;
@@ -639,50 +637,86 @@ body {
   transform: translateY(-3px);
   box-shadow: 0 10px 25px rgba(255, 41, 41, 0.4);
 }
-.search-wrapper {
-  display: flex;
-  align-items: center;
-  width: 400px;
-  margin: 20px auto;
-  background: #ffffff;
-  border: 1px solid #e0e0e0;
-  border-radius: 10px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-  overflow: hidden;
+
+/* --------------------------
+  --------------------------
+     Responsive Design
+  --------------------------
+-------------------------- */
+
+@media (max-width: 430px) {
+  .nav {
+    max-width: 425px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px 10px;
+  }
+  .nav h2 {
+    font-size: 18px;
+  }
+  .nav-sign button {
+    padding: 8px 16px;
+    font-size: 12px;
+  }
+  .main h2 {
+    font-size: 18px;
+  }
+  .login-page {
+    height: calc(100vh - 71px);
+  }
+  .signup-page {
+    height: calc(100vh - 71px);
+  }
+  .ol {
+    margin-left: 140px;
+  }
+  .backHome {
+    top: -500px;
+    left: 10px;
+  }
+  .backHomeAuth {
+    top: 20px;
+    left: 10px;
+  }
 }
-.search-wrapper input {
-  flex: 1;
-  padding: 12px 15px;
-  border: none;
-  outline: none;
-  font-size: 15px;
-  color: #333;
-  background: transparent;
-}
-.search-wrapper input::placeholder {
-  color: #aaa;
-}
-.search-wrapper button {
-  border: none;
-  background: transparent;
-  padding: 12px 15px;
-  cursor: pointer;
-  font-size: 18px;
-  color: #66c2a5;
-  transition: 0.3s;
-}
-.search-wrapper button:hover {
-  color: #66eec3;
-  background-color: #009688;
-}
-.search-wrapper:focus-within {
-  border-color: #66c2a5;
-  box-shadow: 0 4px 15px #66c2a533;
-}
-.showScoreDiv h2 {
-  margin-top: 20px;
-  color: #ffd700;
-}
-.ol {
-  margin-left: 230px;
+@media (max-width: 380px) {
+  .login-card {
+    width: 280px;
+  }
+  .login-card button {
+    padding: 10px;
+    font-size: 14px;
+    border-radius: 12px;
+  }
+  .signup-card {
+    width: 290px;
+  }
+  .signup-card button {
+    padding: 10px;
+    font-size: 14px;
+    border-radius: 12px;
+  }
+  .search-wrapper {
+    width: 340px;
+  }
+  .ol {
+    margin-left: 120px;
+  }
+  .scoreExplainerText {
+    font-size: 18px;
+  }
+  .scoreExplainerText2 {
+    font-size: 18px;
+  }
+  .scoreExplainerText3 {
+    font-size: 18px;
+  }
+  .backHome {
+    top: -500px;
+    left: 10px;
+  }
+  .backHomeAuth {
+    top: 20px;
+    left: 10px;
+  }
 }
