@@ -679,7 +679,7 @@ body {
     left: 10px;
   }
   .search-wrapper {
-    width: 390px;
+    width: 370px;
   }
 }
 @media (max-width: 380px) {
@@ -724,5 +724,10 @@ body {
   .backHomeAuth {
     top: 20px;
     left: 10px;
+  }
+}
+@media (max-width: 350px) {
+  .search-wrapper {
+    width: 300px;
   }
 }
