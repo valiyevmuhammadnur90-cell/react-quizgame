@@ -69,6 +69,42 @@ const quizCards = [
     image:
       "https://www.sciencing.com/sciencing/what-is-geology-13764454/ce627d12bb604ced899fee14f2ff23fb.jpg",
   },
+  {
+    id: "space",
+    title: "Space Quiz",
+    image:
+      "https://www.polytechnique-insights.com/wp-content/uploads/2022/11/space-1024x640.jpeg",
+  },
+  {
+    id: "health",
+    title: "Health quiz",
+    image:
+      "https://img.freepik.com/free-vector/tiny-cardiology-doctor-nurse-examining-heart-blood-pressure-prescribing-treatment-medical-cardiovascular-checkup-flat-vector-illustration-anatomy-hospital-heart-diseases-health-care-concept_74855-20963.jpg?semt=ais_hybrid&w=740&q=80",
+  },
+  {
+    id: "food",
+    title: "Food quiz",
+    image:
+      "https://img.freepik.com/free-photo/top-view-table-full-food_23-2149209253.jpg?semt=ais_hybrid&w=740&q=80",
+  },
+  {
+    id: "business",
+    title: "Business quiz",
+    image:
+      "https://londonsba.org.uk/wp-content/uploads/2023/09/hands-table-during-business-meeting-1.jpg",
+  },
+  {
+    id: "psychology",
+    title: "Psychology quiz",
+    image:
+      "https://www.counselmagazine.co.uk/images/woodwing/214441.jpeg?sfvrsn=5f6492fe_2",
+  },
+  {
+    id: "internet",
+    title: "Internet quiz",
+    image:
+      "https://www.ilcittadinomb.it/wp-content/uploads/2025/10/Rete-Internet-comuncazioni-Freepik-scaled-e1761143697817.jpg",
+  },
 ];
 
 export default quizCards;

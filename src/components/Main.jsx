@@ -55,6 +55,12 @@ function Main() {
         <option value="math"></option>
         <option value="music"></option>
         <option value="geology"></option>
+        <option value="space"></option>
+        <option value="health"></option>
+        <option value="food"></option>
+        <option value="business"></option>
+        <option value="psychology"></option>
+        <option value="internet"></option>
       </datalist>
 
       <div className="cards">
